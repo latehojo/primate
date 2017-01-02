@@ -1,0 +1,34 @@
+//fonts
+$font-primary: 'PT Mono', monospace;
+$font-secondary: 'Menlo', 'Consolas', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+
+// font size
+$large-font: 24px;
+$normal-font: 16px;
+$small-font: 14px;
+$extra-small-font: 12px;
+
+// base colors
+$first-transparency-black: rgba(0,0,0,.2);
+$second-transparency-black: rgba(0,0,0,.4);
+$white: rgb(240,246,247);
+$silver: rgb(170,170,170);
+$mauve: rgb(118,30,82);
+$blue: rgb(114,170,180);
+$dark-mauve: rgb(38,5,21);
+$dark-blue: rgb(16,47,53);
+$pink: rgb(248,115,179);
+
+//day theme colors
+$color-primary: $mauve;
+$color-secondary: $blue;
+$color-tertiary: $pink;
+
+// time animation
+$fast-time: 1s;
+$normal-time: 2s;
+$slow-time: 5s;
+
+/* z-index */
+$z-index-nearest: 100;
+$z-index-secondary: 10;

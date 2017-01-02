@@ -1,0 +1,21 @@
+@mixin box-sizing($value){
+	box-sizing: $value;  
+	-moz-box-sizing: $value;  
+	-webkit-box-sizing: $value;
+}
+@mixin slash($fast-time){
+	animation: $fast-time linear 0s normal none infinite opacity;
+	-webkit-animation: $fast-time ease-out 0s normal none infinite opacity;
+	-moz-animation: $fast-time ease-out 0s normal none infinite opacity;
+	-o-animation: $fast-time ease-out 0s normal none infinite opacity;
+}
+
+/* animated */
+@keyframes opacity {
+	0% {opacity: 0; }
+	20% {opacity: 0; }
+	40% {opacity: 1; }
+	60% {opacity: 1; }
+	80% {opacity: 0; }
+	100% {opacity: 0; }
+}

@@ -1,0 +1,291 @@
+*{
+	@include box-sizing(border-box);
+}
+h1{
+	font-size: 24px;
+	line-height: 24px;
+	font-family: $font-primary;
+}
+h3{
+	font-size: 14px;
+	line-height: 14px;
+	font-family: $font-primary;
+}
+a{
+	color: $mauve;
+}
+b{
+	font-weight: bold;
+}
+p{
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+html{
+	height: 100%;
+	body{
+		height: 100%;
+		background-color: $blue;
+		color: $dark-blue;
+		font-family: $font-secondary;
+	}
+}
+.nowrap{
+	white-space: nowrap;
+}
+
+/* header */
+
+/* global navigation */
+.gn{
+	height: 40px;
+	position: fixed;
+	min-width: 100%;
+	top: 0;
+	left: 0;
+	background-color: $mauve;
+	font-size: 0;
+	z-index: $z-index-nearest;
+	&_column{
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 20px;
+	}
+}
+
+/* header container */
+.hc{
+	font-size: 0;
+	padding: 0 20px;
+	padding-top: 40px;
+	&_column{
+		display: inline-block;
+	}
+}
+
+/* main */
+
+/* two columns */
+.tc{
+	position: relative;
+	padding: 0 20px;
+	z-index: $z-index-secondary;
+	margin: 10px 0;
+	@extend .float-correct;
+	&_left{
+		width: 66.6666%;
+		float: left;
+	}
+	&_right{
+		width: 33.3333%;
+		float: left;
+	}
+}
+
+/* big section */
+.bs{
+	margin-right: 10px;
+	padding: 38px;
+	border-width: 0 2px 2px;
+	border-style: solid;
+	border-color: $white;
+	@extend .float-correct;
+	&_left{
+		width: 25%;
+		float: left;
+		padding-right: 10px;
+		&_margin-bottom{
+			&+&{
+				margin-top: 20px;
+			}
+		}
+	}
+	&_right{
+		width: 75%;
+		float: left;
+		padding-left: 10px;
+	}
+	&_title{
+		margin: -50px -40px 26px;
+		text-align: center;
+		overflow: hidden;
+		padding: 0 20px;
+	}
+	&_title-elems{
+		display: inline-block;
+		position: relative;
+		padding: 0 20px;
+		max-width: 100%;
+		&:before,
+		&:after{
+			content: '';
+			width: 9999px;
+			height: 2px;
+			background: $white;
+			position: absolute;
+			top: 50%;
+			margin-top: -2px;
+		}
+		&:before{
+			right: 100%;
+		}
+		&:after{
+			left: 100%;
+		}
+	}
+}
+
+/* page photo */
+.pp{
+	position: relative;
+	width: 100%;
+	font-size: 0;
+	padding-bottom: 10px;
+	&_photo-container{
+
+	}
+	&_photo{
+		width: 100%;
+	}
+	&_buttons-list{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0 10px;
+		text-align: center;
+	}
+	&_button-item{
+		
+	}
+}
+
+/* page nav */
+.pn{
+	&_item{
+		.brackets:before,
+		.brackets:after{
+			border-color: $dark-blue;
+			height: 12px;
+		}
+		&+&{
+			margin-top: 10px;
+		}
+	}
+	&_link{
+		font-size: 14px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&_stat{
+		display: inline-block;
+		&_positive{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+}
+
+/* page info */
+.pi{
+	&_item{
+		font-size: 14px;
+	}
+	&_link{
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 14px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+/* small section */
+.ss{
+	margin-left: 10px;
+	padding: 19px;
+	border-width: 0 1px 1px;
+	border-style: solid;
+	border-color: $white;
+	&_title{
+		overflow: hidden;
+		height: 15px;
+		padding: 0 15px;
+		margin: -27px -20px 12px;
+		&_elems{
+			display: inline-block;
+			position: relative;
+			padding: 0 10px;
+			max-width: 100%;
+			&:before,
+			&:after{
+				content: '';
+				width: 9999px;
+				height: 1px;
+				background: $white;
+				position: absolute;
+				top: 50%;
+				margin-top: -2px;
+			}
+			&:before{
+				right: 100%;
+			}
+			&:after{
+				left: 100%;
+			}
+		}
+	}
+}
+
+/* person list */
+.pl{
+	@extend .float-correct;
+	&_item{
+		width: 50%;
+		margin-top: 10px;
+		float: left;
+		font-size: 0;
+		&:nth-child(1),
+		&:nth-child(2){
+			margin-top: 0;
+		}
+		img{
+			width: 50px;
+		}
+	}
+	&_itable{
+		display: inline-table;
+		position: relative;
+		&:hover{
+			span{
+				text-decoration: underline !important;
+			}
+		}
+	}
+	.user-name{
+		font-size: 12px;
+		position: absolute;
+		top: 0;
+		left: 60px;
+	}
+}
+
+/* global animate */
+.ga{
+	&_gradient{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 25%;
+		max-width: 300px;
+		height: 100%;
+		background: -moz-linear-gradient(left,  rgba(114,170,180,0) 0%, rgba(65,129,141,1) 100%);
+		background: -webkit-linear-gradient(left,  rgba(114,170,180,0) 0%,rgba(65,129,141,1) 100%);
+		background: linear-gradient(to right,  rgba(114,170,180,0) 0%,rgba(65,129,141,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0072aab4', endColorstr='#41818d',GradientType=1 );
+	}
+}

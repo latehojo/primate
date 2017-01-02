@@ -1,0 +1,17 @@
+/*
+Theme Name:   BIOS
+Author:       Pavel Palchik
+Version:      1.0
+Tags:         dark-blue, right-sidebar, responsive-layout
+Text Domain:  BIOS
+*/
+@import 'vendor/_normalize.scss';
+@import 'base/_variables.scss';
+@import 'base/_mixins.scss';
+@import 'base/_placeholders.scss';
+@import 'framework/_grid.scss';
+@import 'framework/_breakpoints.scss';
+@import 'framework/_layout.scss';
+@import 'modules/_buttons.scss';
+@import 'modules/_lists.scss';
+@import 'modules/_tabs.scss';

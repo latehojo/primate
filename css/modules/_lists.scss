@@ -1,0 +1,74 @@
+/* user navigation */
+.user-nav{
+	&_item{
+		display: inline-block;
+		line-height: 40px;
+		a{
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-family: $font-primary;
+			color: $white;
+			line-height: 20px;
+			font-size: 13px;
+			text-decoration: none;
+			&:first-letter,
+			&:after,
+			&:hover{
+				color: $pink;
+			}
+		}
+		&__active{
+			&:after{
+				content: '_';
+				position: absolute;
+				font-family: inherit;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				@include slash($fast-time);
+			}
+		}
+		&+&{
+			margin-left: 20px;
+		}
+	}
+}
+
+/* user bar */
+.user-bar{
+	&_item{
+		display: inline-block;
+		vertical-align: middle;
+		a{
+			position: relative;
+			&:after{
+				content: '';
+				overflow: hidden;
+				display: inline-block;
+				background-repeat: no-repeat;
+				background-size: 24px;
+				background-position: top;
+				width: 24px;
+			}
+			&:hover:after{
+				background-position: bottom;
+			}
+		}
+		&+&{
+			margin-left: 20px;
+		}
+	}
+}
+#gn-frends:after{
+	background-image: url(../img/ico/gn-frends.png);
+	height: 17px;
+}
+#gn-preceptor:after{
+	background-image: url(../img/ico/gn-preceptor.png);
+	height: 26px;
+}
+#gn-message:after{
+	background-image: url(../img/ico/gn-message.png);
+	height: 17px;
+}

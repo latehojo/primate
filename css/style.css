@@ -1,0 +1,219 @@
+/*
+Theme Name:   BIOS
+Author:       Pavel Palchik
+Version:      1.0
+Tags:         dark-blue, right-sidebar, responsive-layout
+Text Domain:  BIOS
+*/
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body,
+html{
+	height: 100%;
+}
+input,
+textarea,
+body{
+	color: #fff;
+	font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+body{
+	background-color: #72aab4;
+}
+h1,
+h2,
+h3{
+	font-family: 'PT Mono', monospace;
+	font-weight: normal;
+}
+{
+	transition: all 0.1s ease;
+}
+
+/* UI Kit */
+.input input,
+.button button{
+	background-color: rgba(0,0,0,.2);
+	border: 0;
+	padding: 0 10px;
+}
+.button button{
+	cursor: pointer;
+	color: #eaf3f5
+}
+.input input{
+	line-height: 24px;
+}
+.button button{
+	height: 24px;
+	line-height: 24px;
+}
+.input input:focus,
+.input input:hover,
+.button button:hover{
+	background-color: rgba(0,0,0,.4);
+}
+.input:before,
+.button:before{
+	content: '[';
+	font-size: 12px;
+	color: #eaf3f5
+}
+.input:after,
+.button:after{
+	content: ']';
+	font-size: 12px;
+	color: #eaf3f5
+}
+
+/* header */
+
+/* global nav */
+#global-nav{
+	height: 40px;
+	position: fixed;
+	min-width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #761e48;
+	font-size: 0;
+}
+.gn-item{
+	display: inline-block;
+}
+
+/* user menu */
+ul.user-menu,
+ul.user-bar{
+	list-style: none;
+	margin: 0 10px;
+	font-size: 0;
+}
+.ub-item,
+.um-item{
+	display: inline-block;
+	vertical-align: middle;
+}
+.user-menu .um-item{
+	font-size: 13px;
+	line-height: 40px;
+	padding: 0 10px;
+}
+.user-menu .um-link{
+	position: relative;
+	color: #eaf3f5;
+	text-decoration: none;
+	font-family: 'PT Mono', monospace;
+	display: inline-block;
+	line-height: 20px;
+}
+.user-menu .um-link_active:after{
+	content: '_';
+	position: absolute;
+	font-family: inherit;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: 1s linear 0s normal none infinite opacity;
+	-webkit-animation: 1s ease-out 0s normal none infinite opacity;
+	-moz-animation: 1s ease-out 0s normal none infinite opacity;
+	-o-animation: 1s ease-out 0s normal none infinite opacity;
+}
+.user-menu .um-link_active:after,
+.user-menu .um-link:hover,
+.user-menu .um-link:first-letter{
+	color: #f873b3;
+}
+@-webkit-keyframes opacity {
+	0% {opacity: 0; }
+	20% {opacity: 0; }
+	40% {opacity: 1; }
+	60% {opacity: 1; }
+	80% {opacity: 0; }
+	100% {opacity: 0; }
+}
+@keyframes opacity {
+	0% {opacity: 0; }
+	20% {opacity: 0; }
+	40% {opacity: 1; }
+	60% {opacity: 1; }
+	80% {opacity: 0; }
+	100% {opacity: 0; }
+}
+.gn-search{
+	margin: 0 20px;
+}
+.gn-search .input input{
+	min-width: 300px;
+}
+.search-cell{
+	display: inline-block;
+	vertical-align: middle;
+}
+.user-bar{
+	margin: 0 25px;
+}
+.ub-item + .ub-item{
+	margin-left: 20px;
+}
+.user-bar .ub-link{
+	height: 40px;
+	width: 40px;
+}
+.user-bar .ub-link:after{
+	content: '';
+	background-size: cover;
+	overflow: hidden;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: top;
+	width: 24px;
+}
+#gn-frends:after{
+	background-image: url(../img/ico/gn-frends.png);
+	height: 17px;
+}
+#gn-preceptor:after{
+	background-image: url(../img/ico/gn-preceptor.png);
+	height: 26px;
+}
+#gn-message:after{
+	background-image: url(../img/ico/gn-message.png);
+	height: 17px;
+}
+.user-bar .ub-link:hover:after{
+	background-position: bottom;
+}
+
+
+
+/* global animate */
+#global-animate{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+#global-animate .ga-gradient{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 33.3333%;
+	height: 100%;
+	background: -moz-linear-gradient(left,  rgba(79,143,155,0) 0%, rgba(79,143,155,1) 100%);
+	background: -webkit-linear-gradient(left,  rgba(79,143,155,0) 0%,rgba(79,143,155,1) 100%);
+	background: linear-gradient(to right,  rgba(79,143,155,0) 0%,rgba(79,143,155,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004f8f9b', endColorstr='#4f8f9b',GradientType=1 );
+}
+
+/* main */
